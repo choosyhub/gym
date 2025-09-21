@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helix Labz - News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .article-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .article-card .content {
+            background: white;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="flex items-center">
+                        <img src="http://static.photos/blue/200x200/42" alt="Helix Labz Logo" class="h-12">
+                        <span class="ml-2 text-xl font-bold">HELIX LABZ</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <nav>
+                        <ul class="flex space-x-6">
+                            <li><a href="#" class="hover:text-blue-200 font-medium">HOME</a></li>
+                            <li><a href="#" class="hover:text-blue-200 font-medium">SHOP</a></li>
+                            <li><a href="#" class="hover:text-blue-200 font-medium">LAB REPORT</a></li>
+                            <li><a href="#" class="hover:text-blue-200 font-medium">AUTHENTICITY</a></li>
+                            <li><a href="#" class="text-blue-200 font-medium">BLOGS</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="hover:text-blue-200">
+                            <i data-feather="search"></i>
+                        </a>
+                        <a href="#" class="hover:text-blue-200">
+                            <i data-feather="user"></i>
+                        </a>
+                        <a href="#" class="hover:text-blue-200">
+                            <i data-feather="heart"></i>
+                        </a>
+                        <a href="#" class="hover:text-blue-200">
+                            <i data-feather="shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <button class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden bg-white shadow-lg hidden" id="mobileMenu">
+        <div class="container mx-auto px-4 py-4">
+            <nav>
+                <ul class="space-y-4">
+                    <li><a href="#" class="block hover:text-blue-600">HOME</a></li>
+                    <li><a href="#" class="block hover:text-blue-600">SHOP</a></li>
+                    <li><a href="#" class="block hover:text-blue-600">LAB REPORT</a></li>
+                    <li><a href="#" class="block hover:text-blue-600">AUTHENTICITY</a></li>
+                    <li><a href="#" class="block text-blue-600 font-medium">BLOGS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-indigo-900/20"></div>
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-shadow" data-aos="fade-up">HELIX LABZ NEWS</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100" data-aos="fade-up" data-aos-delay="100">
+                Stay updated with the latest in fitness, nutrition, and supplements
+            </p>
+            <div class="max-w-md mx-auto relative" data-aos="fade-up" data-aos-delay="200">
+                <input type="text" placeholder="Search articles..." class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none">
+                <button class="absolute right-2 top-2 text-gray-500">
+                    <i data-feather="search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Articles Section -->
+            <div class="lg:w-2/3">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800">Latest Articles</h2>
+                
+                <!-- Article 1 -->
+                <article class="article-card rounded-xl overflow-hidden mb-8 hover-scale" data-aos="fade-up">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="http://static.photos/fitness/640x360/1" alt="Bodybuilding Supplements" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-blue-600 font-medium">NEWS</span>
+                                <span class="text-sm text-gray-500">29 Aug</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Bodybuilding Supplements Online Store: What to Buy & Where</h3>
+                            <p class="text-gray-600 mb-4">As awareness about fitness and nutrition grows, more people are shifting towards trusted online supplement stores for their health and performance needs...</p>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read more</a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-500 hover:text-blue-600"><i data-feather="facebook"></i></a>
+                                    <a href="#" class="text-gray-500 hover:text-blue-600"><i data-feather="mail"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="article-card rounded-xl overflow-hidden mb-8 hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="http://static.photos/fitness/640x360/2" alt="Creatine Monohydrate" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-blue-600 font-medium">NEWS</span>
+                                <span class="text-sm text-gray-500">29 Aug</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Why the fitness world prefers Helix Labz CREATININE</h3>
+                            <p class="text-gray-600 mb-4">MONOHYDRATE POWDER Creatine Monohydrate is a popular dietary supplement among fitness freaks and gym enthusiasts...</p>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read more</a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-500 hover:text-blue-600"><i data-feather="facebook"></i></a>
+                                    <a href="#" class="text-gray-500 hover:text-blue-600"><i data-feather="mail"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="article-card rounded-xl overflow-hidden mb-8 hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="http://static.photos/food/640x360/3" alt="Rice Cake" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-blue-600 font-medium">NEWS</span>
+                                <span class="text-sm text-gray-500">29 Aug</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">YUMMY! THE ULTIMATE HELIX LABZ RICE CAKE</h3>
+                            <p class="text-gray-600 mb-4">Rice Cake is referred to as a healthy snack, consumed mainly by fitness enthusiasts for centuries. But the question arises: are they healthy or are they loaded with harmful fat?</p>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read more</a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-500 hover:text-blue-600"><i data-feather="facebook"></i></a>
+                                    <a href="#" class="text-gray-500 hover:text-blue-600"><i data-feather="mail"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Pagination -->
+                <div class="flex justify-center mt-8">
+                    <nav class="flex items-center space-x-2">
+                        <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">1</a>
+                        <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg">2</a>
+                        <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg">
+                            <i data-feather="chevron-right"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3">
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100" data-aos="fade-left">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Protein</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Food & Nuts</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Pre-workout</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Creatine/Amino</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Fat Burner</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Gainer's</a></li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100" data-aos="fade-left" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Recent Posts</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <img src="http://static.photos/fitness/100x100/4" alt="Recent post" class="w-16 h-16 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600"><a href="#">Bodybuilding Supplements Online Store</a></h4>
+                                <p class="text-sm text-gray-500">Aug 29, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <img src="http://static.photos/fitness/100x100/5" alt="Recent post" class="w-16 h-16 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600"><a href="#">Why the fitness world prefers Helix Labz CREATININE</a></h4>
+                                <p class="text-sm text-gray-500">Aug 29, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <img src="http://static.photos/food/100x100/6" alt="Recent post" class="w-16 h-16 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600"><a href="#">YUMMY! THE ULTIMATE HELIX LABZ RICE CAKE</a></h4>
+                                <p class="text-sm text-gray-500">Aug 29, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Sale Products</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <img src="http://static.photos/food/100x100/7" alt="Product" class="w-16 h-16 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600"><a href="#">Helix Labz Kulfi Special Peanut Butter</a></h4>
+                                <p class="text-sm font-bold text-blue-600">Rs. 499.00</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <img src="http://static.photos/food/100x100/8" alt="Product" class="w-16 h-16 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium text-gray-800 hover:text-blue-600"><a href="#">Helix 100% WHEY Protein Matrix</a></h4>
+                                <p class="text-sm font-bold text-blue-600">Rs. 3,889.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+     <footer class="bg-white text-gray-900 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <img src="https://helixlabz.com/cdn/shop/files/logo-3_150x.png" alt="Helix Labz" class="h-10 mb-4">
+                    <p class="text-gray-600">Premium supplements designed to help you achieve your fitness goals with powerful results.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 hover:text-gray-900 transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-600 hover:text-gray-900 transition duration-300">About Us</a></li>
+                        <li><a href="collections.html" class="text-gray-600 hover:text-gray-900 transition duration-300">Collections</a></li>
+                        <li><a href="lab-reports.html" class="text-gray-600 hover:text-gray-900 transition duration-300">Lab Report</a></li>
+                        <li><a href="authenticity.html" class="text-gray-600 hover:text-gray-900 transition duration-300">Authencity</a></li>
+                        <li><a href="blog.html" class="text-gray-600 hover:text-gray-900 transition duration-300">Blogs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Combo offer</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Creatine</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Pre-Workout</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Eaas</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Fat Burner</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Gainer</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Isolate</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Peanut Butter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">Contact Us</h3>
+                    <address class="text-gray-600 not-italic">
+                        <p class="mb-2">HEAD OFFICE: 46/2/3, 2nd Floor, Site-4, Sahibabad, Ghaziabad, Uttar Pradesh, 201010.</p>
+                        <p class="mb-2">Email: sales@helixlabz.com</p>
+                        <p>Phone: +91-9821489289</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 pt-6 sm:pt-8">
+                <div class="flex flex-col space-y-4 md:flex-row md:justify-between md:items-center md:space-y-0">
+                    <!-- Copyright -->
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-600 text-sm sm:text-base font-medium">© 2025 HELIXLABZ. All Rights Reserved.</p>
+                    </div>
+                    
+                    <!-- Links and Social Media -->
+                    <div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:items-center sm:space-x-6">
+                        <!-- Policy Links -->
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2 sm:gap-3">
+                            <a href="privacy-policy.html" class="text-gray-600 hover:text-gray-900 transition duration-300 text-xs sm:text-sm py-2 px-3 rounded-lg hover:bg-gray-50 min-h-[40px] flex items-center justify-center whitespace-nowrap">Privacy Policy</a>
+                            <a href="refund-returns.html" class="text-gray-600 hover:text-gray-900 transition duration-300 text-xs sm:text-sm py-2 px-3 rounded-lg hover:bg-gray-50 min-h-[40px] flex items-center justify-center whitespace-nowrap">Refund & Returns</a>
+                            <a href="terms.html" class="text-gray-600 hover:text-gray-900 transition duration-300 text-xs sm:text-sm py-2 px-3 rounded-lg hover:bg-gray-50 min-h-[40px] flex items-center justify-center whitespace-nowrap">Terms & Conditions</a>
+                            <a href="shipping-policy.html" class="text-gray-600 hover:text-gray-900 transition duration-300 text-xs sm:text-sm py-2 px-3 rounded-lg hover:bg-gray-50 min-h-[40px] flex items-center justify-center whitespace-nowrap">Shipping Policy</a>
+                        </div>
+                        
+                        <!-- Social Media Icons -->
+                        <div class="flex justify-center space-x-3">
+                            <a href="https://www.facebook.com/p/helixlabz-100084505584006/" class="text-gray-600 hover:text-blue-600 transition duration-300 p-2 rounded-full hover:bg-blue-50 min-h-[40px] min-w-[40px] flex items-center justify-center group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook group-hover:scale-110 transition-transform duration-200"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="https://www.instagram.com/helixlabz/" class="text-gray-600 hover:text-pink-600 transition duration-300 p-2 rounded-full hover:bg-pink-50 min-h-[40px] min-w-[40px] flex items-center justify-center group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram group-hover:scale-110 transition-transform duration-200"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
+                            <a href="https://in.linkedin.com/company/helix-labz02" class="text-gray-600 hover:text-blue-700 transition duration-300 p-2 rounded-full hover:bg-blue-50 min-h-[40px] min-w-[40px] flex items-center justify-center group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin group-hover:scale-110 transition-transform duration-200"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
